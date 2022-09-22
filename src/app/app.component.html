@@ -1,0 +1,38 @@
+<h1>Jogo das charadas</h1>
+
+<div class="tabela" *ngFor="let linha of letras">
+  <div class="celula" *ngFor="let coluna of linha" [class]="coluna.status">
+    {{ coluna.caracter }}
+  </div>
+</div>
+
+<div class="teclado">
+  <button class="tecla" id="A" (click)="colocaCaracter('A')">A</button>
+  <button class="tecla" id="B" (click)="colocaCaracter('B')">B</button>
+  <button class="tecla" id="C" (click)="colocaCaracter('C')">C</button>
+  <button class="tecla" id="D" (click)="colocaCaracter('D')">D</button>
+  <button class="tecla" id="E" (click)="colocaCaracter('E')">E</button>
+  <button class="tecla" id="F" (click)="colocaCaracter('F')">F</button>
+  <button class="tecla" id="G" (click)="colocaCaracter('G')">G</button>
+  <button class="tecla" id="H" (click)="colocaCaracter('H')">H</button>
+  <button class="tecla" id="I" (click)="colocaCaracter('I')">I</button>
+  <button class="tecla" id="J" (click)="colocaCaracter('J')">J</button>
+  <button class="tecla" id="K" (click)="colocaCaracter('K')">K</button>
+  <button class="tecla" id="L" (click)="colocaCaracter('L')">L</button>
+  <button class="tecla" id="M" (click)="colocaCaracter('M')">M</button>
+  <button class="tecla" id="N" (click)="colocaCaracter('N')">N</button>
+  <button class="tecla" id="O" (click)="colocaCaracter('O')">O</button>
+  <button class="tecla" id="P" (click)="colocaCaracter('P')">P</button>
+  <button class="tecla" id="Q" (click)="colocaCaracter('Q')">Q</button>
+  <button class="tecla" id="R" (click)="colocaCaracter('R')">R</button>
+  <button class="tecla" id="S" (click)="colocaCaracter('S')">S</button>
+  <button class="tecla" id="T" (click)="colocaCaracter('T')">T</button>
+  <button class="tecla" id="U" (click)="colocaCaracter('U')">U</button>
+  <button class="tecla" id="V" (click)="colocaCaracter('V')">V</button>
+  <button class="tecla" id="W" (click)="colocaCaracter('W')">W</button>
+  <button class="tecla" id="X" (click)="colocaCaracter('X')">X</button>
+  <button class="tecla" id="Y" (click)="colocaCaracter('Y')">Y</button>
+  <button class="tecla" id="Z" (click)="colocaCaracter('Z')">Z</button>
+  <button class="tecla_enter" (click)="confirmaPalavra()">ENTER</button>
+  <button class="tecla_backspace" (click)="removeCaracter()">BACKSPACE</button>
+</div>

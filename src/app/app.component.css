@@ -1,0 +1,72 @@
+p {
+  font-family: Lato;
+}
+
+.tabela {
+  width: 80vw;
+  height: 15vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.celula {
+  text-align: center;
+  justify-content: center;
+  width: 10vw;
+  height: 10vh;
+  background-color: lightgray;
+  color: white;
+}
+
+.celula-acerto {
+  text-align: center;
+  justify-content: center;
+  width: 10vw;
+  height: 10vh;
+  background-color: green;
+  color: white;
+}
+
+.celula-neutro {
+  text-align: center;
+  justify-content: center;
+  width: 10vw;
+  height: 10vh;
+  background-color: orange;
+  color: white;
+}
+
+.celula-erro {
+  text-align: center;
+  justify-content: center;
+  width: 10vw;
+  height: 10vh;
+  background-color: darkgrey;
+  color: white;
+}
+
+.teclado {
+  width: 80vw;
+  height: 20vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tecla {
+  width: 10vw;
+  height: 10vh;
+  background-color: lightgray;
+}
+
+.tecla_enter {
+  width: 20vw;
+  height: 10vh;
+  background-color: lightgray;
+}
+
+.tecla_backspace {
+  width: 25vw;
+  height: 10vh;
+  background-color: lightgray;
+}

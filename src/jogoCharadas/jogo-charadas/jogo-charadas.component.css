@@ -1,0 +1,10 @@
+.tabela {
+  display: grid;
+  grid-template-rows: repeat(linhas, 100px);
+  grid-template-columns: repeat(colunas, 100px);
+}
+
+.celula {
+  background-color: blue;
+  color: white;
+}
