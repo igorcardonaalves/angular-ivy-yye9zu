@@ -1,6 +1,8 @@
 import { Component, OnInit, VERSION } from '@angular/core';
 import { JogoCharadasComponent } from '../jogoCharadas/jogo-charadas/jogo-charadas.component';
 
+import palavrasData from './Files/palavras.json';
+
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -16,9 +18,17 @@ export class AppComponent implements OnInit {
   letrasDaTentativa = 0;
   palavraDaTentativa = '';
 
-  palavra = 'ICARO';
+  palavra = '';
+
+  palavraChave: string[];
 
   constructor() {
+    this.palavraChave = palavrasData[Math.floor(Math.random() * 7)].palavra;
+
+    for (let i = 0; i < 5; i++) {
+      this.palavra += this.palavraChave[i].toUpperCase();
+    }
+
     this.letras = [];
     for (let i = 0; i < this.linhas; i++) {
       this.letras[i] = [];
@@ -71,6 +81,11 @@ export class AppComponent implements OnInit {
     }
     if (acertou) {
       //mensagem de vitória
+      alert(
+        'Você venceu! A palavra era ' +
+          this.palavra +
+          '. Pressione F5 para recomeçar.'
+      );
     } else {
       for (let i = 0; i < this.colunas; i++) {
         if (this.letras[this.tentativa - 1][i].status != 'celula-acerto') {
@@ -127,6 +142,11 @@ export class AppComponent implements OnInit {
       this.letrasDaTentativa = 0;
       if (this.tentativa > 6) {
         //mensagem de game over
+        alert(
+          'Fim de jogo! a palavra era ' +
+            this.palavra +
+            ' pressione F5 para recomeçar.'
+        );
       }
     }
   }
